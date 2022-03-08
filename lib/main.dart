@@ -1,8 +1,10 @@
+
+
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'LoginDemo.dart';
 import 'ForgotPassword.dart';
-import 'camera.dart';
+import 'posts.dart';
 
 void main() => runApp(MyApp());
 
@@ -23,7 +25,7 @@ class MyApp extends StatelessWidget {
         '/second': (context) => SecondPage(),
         '/login': (context) => LoginDemo(),
         '/forgotpassword': (context) => ForgotPassword(),
-        '/camera': (context) => camera(),
+        '/posts': (context) => posts(),
       },
       initialRoute: '/',
     );
@@ -31,7 +33,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MainPage extends StatelessWidget {
-  
+
   @override
   Widget build(BuildContext context) =>
       Scaffold(
@@ -55,9 +57,9 @@ class MainPage extends StatelessWidget {
                 onPressed: () =>
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => camera()),
+                      MaterialPageRoute(builder: (context) => posts()),
                     ),
-                child: Text('camera'),
+                child: Text('Api Call'),
               ),
               ElevatedButton(
                 onPressed: () =>
@@ -65,7 +67,7 @@ class MainPage extends StatelessWidget {
                       context,
                       MaterialPageRoute(builder: (context) => SecondPage()),
                     ),
-                child: Text('Flutter Wiki'),
+                child: Text('Flutter Wikipedia'),
               )
             ],
           ),
